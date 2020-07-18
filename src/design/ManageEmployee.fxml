@@ -1,0 +1,1064 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0"
+            prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="code.ControllerManageEmployee">
+    <children>
+        <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="740.0"
+                 prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Create Employee">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox layoutX="176.0" layoutY="135.0" prefHeight="312.0" prefWidth="163.0">
+                                    <children>
+                                        <Label text="Employee ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="First Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Last Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Date of Birth">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Contact Number">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Address">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="366.0" layoutY="135.0" prefHeight="327.0" prefWidth="372.0">
+                                    <children>
+                                        <TextField fx:id="txtEmpID">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="txtEmpFName">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="txtEmpLName">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <DatePicker fx:id="dateEmpDOB" prefHeight="31.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </DatePicker>
+                                        <TextField fx:id="txtEmpNumber">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextArea fx:id="txtEmpAddress" prefHeight="59.0" prefWidth="372.0"
+                                                  wrapText="true">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets top="5.0"/>
+                                            </padding>
+                                        </TextArea>
+                                    </children>
+                                </VBox>
+                                <Button fx:id="btnCreateEmployee" layoutX="466.0" layoutY="496.0"
+                                        mnemonicParsing="false" onAction="#createEmployee" prefHeight="37.0"
+                                        prefWidth="172.0" text="Create Employee">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="Create Employee">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Delete Employee">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="btnDeleteEmployee" layoutX="427.0" layoutY="562.0"
+                                        mnemonicParsing="false" onAction="#deleteEmployee" prefHeight="37.0"
+                                        prefWidth="172.0" text="Delete Employee">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <TextField fx:id="txtEmpIDDelete" layoutX="370.0" layoutY="74.0" prefHeight="31.0"
+                                           prefWidth="286.0"/>
+                                <VBox layoutX="170.0" layoutY="207.0" prefHeight="312.0" prefWidth="163.0">
+                                    <children>
+                                        <Label text="Employee ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="First Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Last Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Date of Birth">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Contact Number">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Address">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="358.0" layoutY="207.0" prefHeight="327.0" prefWidth="372.0">
+                                    <children>
+                                        <Label fx:id="lblEmpIDDel" prefHeight="0.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblEmpFNameDel" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblEmpLNameDel" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblEmpDOBDel" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblEmpNumberDel" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="23.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblEmpAddressDel" prefHeight="55.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets/>
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets top="5.0"/>
+                                            </padding>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Label layoutX="244.0" layoutY="76.0" text="Employee ID">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="btnSearchEmployeeDelete" layoutX="421.0" layoutY="126.0"
+                                        mnemonicParsing="false" onAction="#searchDeleteEmployee" prefHeight="37.0"
+                                        prefWidth="172.0" text="Search Employee">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="Delete Employee">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Update Employee">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="btnUpdateEmployee" layoutX="427.0" layoutY="563.0"
+                                        mnemonicParsing="false" onAction="#updateEmployee" prefHeight="37.0"
+                                        prefWidth="172.0" text="Update Employee">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <VBox layoutX="358.0" layoutY="207.0" prefHeight="327.0" prefWidth="372.0">
+                                    <children>
+                                        <Label fx:id="lblEmpIDUp" prefHeight="37.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <TextField fx:id="txtEmpFNameUp">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="txtEmpLNameUp">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <DatePicker fx:id="dateEmpDOBUp" prefHeight="31.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </DatePicker>
+                                        <TextField fx:id="txtEmpNumberUp">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextArea fx:id="txtEmpAddressUp" prefHeight="59.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets top="5.0"/>
+                                            </padding>
+                                        </TextArea>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="170.0" layoutY="207.0" prefHeight="312.0" prefWidth="163.0">
+                                    <children>
+                                        <Label text="Employee ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="First Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Last Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Date of Birth">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Contact Number">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Address">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Label layoutX="244.0" layoutY="76.0" text="Employee ID">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtEmpIDSearch" layoutX="370.0" layoutY="74.0" prefHeight="31.0"
+                                           prefWidth="286.0"/>
+                                <Button fx:id="btnSearchEmployeeUpdate" layoutX="421.0" layoutY="126.0"
+                                        mnemonicParsing="false" onAction="#searchUpdateEmployee" prefHeight="37.0"
+                                        prefWidth="172.0" text="Search Employee">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="Update Employee">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="View Employee">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="900.0">
+                            <children>
+                                <VBox layoutX="372.0" layoutY="207.0" prefHeight="327.0" prefWidth="372.0">
+                                    <children>
+                                        <Label fx:id="lblEmpID" prefHeight="0.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblEmpFName" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblEmpLName" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblEmpDOB" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblEmpNumber" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="23.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblEmpAddress" prefHeight="55.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets/>
+                                            </VBox.margin>
+                                            <padding>
+                                                <Insets top="5.0"/>
+                                            </padding>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="170.0" layoutY="207.0" prefHeight="312.0" prefWidth="163.0">
+                                    <children>
+                                        <Label text="Employee ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="First Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Last Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Date of Birth">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Contact Number">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Address">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Button fx:id="btnSearchEmployeeView" layoutX="421.0" layoutY="126.0"
+                                        mnemonicParsing="false" onAction="#searchViewEmployee" prefHeight="37.0"
+                                        prefWidth="172.0" text="View Employee">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <TextField fx:id="txtEmpIDView" layoutX="370.0" layoutY="74.0" prefHeight="31.0"
+                                           prefWidth="286.0"/>
+                                <Label layoutX="244.0" layoutY="76.0" text="Employee ID">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="View Employee">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Manage Job Role">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TabPane layoutY="52.0" prefHeight="648.0" prefWidth="900.0"
+                                         tabClosingPolicy="UNAVAILABLE">
+                                    <tabs>
+                                        <Tab text="Assign Job Role">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="394.0"
+                                                            prefWidth="900.0">
+                                                    <children>
+                                                        <VBox layoutX="380.0" layoutY="139.0" prefHeight="166.0"
+                                                              prefWidth="288.0">
+                                                            <children>
+                                                                <TextField fx:id="txtEmpIDJobAssign">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="20.0"/>
+                                                                    </VBox.margin>
+                                                                </TextField>
+                                                                <TextField fx:id="txtRIDJobAssign">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="20.0"/>
+                                                                    </VBox.margin>
+                                                                </TextField>
+                                                                <TextField fx:id="txtHoursJobAssign"/>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox layoutX="198.0" layoutY="139.0" prefHeight="183.0"
+                                                              prefWidth="182.0">
+                                                            <children>
+                                                                <Label text="Employee ID">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="25.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label text="Role ID">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="25.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label text="Hours Worked">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="25.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                        <Button fx:id="btnAssignEmployeeJobRole" layoutX="438.0"
+                                                                layoutY="322.0" mnemonicParsing="false"
+                                                                onAction="#assignJobRole" prefHeight="37.0"
+                                                                prefWidth="172.0" text="Assign Job Role">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0"/>
+                                                            </font>
+                                                        </Button>
+                                                        <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0"
+                                                               prefWidth="900.0" text="Assign Job Role">
+                                                            <font>
+                                                                <Font name="System Bold" size="24.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Delete Job Role">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="615.0"
+                                                            prefWidth="900.0">
+                                                    <children>
+                                                        <Button fx:id="btnDeleteEmployeeJobRole" layoutX="435.0"
+                                                                layoutY="386.0" mnemonicParsing="false"
+                                                                onAction="#deleteJobRole" prefHeight="37.0"
+                                                                prefWidth="172.0" text="Delete Job Role">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0"/>
+                                                            </font>
+                                                        </Button>
+                                                        <VBox layoutX="208.0" layoutY="222.0" prefHeight="183.0"
+                                                              prefWidth="144.0">
+                                                            <children>
+                                                                <Label text="Employee ID">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="25.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label text="Role ID">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="25.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label text="Hours Worked">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="25.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox layoutX="369.0" layoutY="217.0" prefHeight="188.0"
+                                                              prefWidth="305.0">
+                                                            <children>
+                                                                <Label fx:id="lblEmpIDRoleDel" prefHeight="35.0"
+                                                                       prefWidth="307.0">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="20.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label fx:id="lblRIDEmpRoleDel" prefHeight="35.0"
+                                                                       prefWidth="307.0">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="20.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label fx:id="lblHoursEmpRoleDel" prefHeight="35.0"
+                                                                       prefWidth="307.0">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="20.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                        <Label layoutX="242.0" layoutY="70.0" text="Employee ID">
+                                                            <font>
+                                                                <Font size="18.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="txtEmpIDRoleDel" layoutX="373.0"
+                                                                   layoutY="68.0" prefHeight="31.0" prefWidth="286.0"/>
+                                                        <Button fx:id="btnSearchEmployeeRoleDel" layoutX="430.0"
+                                                                layoutY="155.0" mnemonicParsing="false"
+                                                                onAction="#searchDeleteJobRole" prefHeight="37.0"
+                                                                prefWidth="172.0" text="Search Job Role">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0"/>
+                                                            </font>
+                                                        </Button>
+                                                        <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0"
+                                                               prefWidth="900.0" text="Delete Job Role">
+                                                            <font>
+                                                                <Font name="System Bold" size="24.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="txtRoleIDRoleDel" layoutX="373.0"
+                                                                   layoutY="106.0" prefHeight="31.0" prefWidth="286.0"/>
+                                                        <Label layoutX="242.0" layoutY="108.0" prefHeight="0.0"
+                                                               prefWidth="100.0" text="Role ID">
+                                                            <font>
+                                                                <Font size="18.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="View Job Role">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="560.0"
+                                                            prefWidth="900.0">
+                                                    <children>
+                                                        <TextField fx:id="txtEmpIDRoleView" layoutX="373.0"
+                                                                   layoutY="68.0" prefHeight="31.0" prefWidth="286.0"/>
+                                                        <Label layoutX="242.0" layoutY="70.0" text="Employee ID">
+                                                            <font>
+                                                                <Font size="18.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Button fx:id="btnViewEmployeeJobRole11" layoutX="430.0"
+                                                                layoutY="121.0" mnemonicParsing="false"
+                                                                onAction="#searchViewJobRole" prefHeight="37.0"
+                                                                prefWidth="172.0" text="View Job Role">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0"/>
+                                                            </font>
+                                                        </Button>
+                                                        <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0"
+                                                               prefWidth="900.0" text="View Job Role">
+                                                            <font>
+                                                                <Font name="System Bold" size="24.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <VBox layoutX="139.0" layoutY="231.0" prefHeight="200.0"
+                                                              prefWidth="200.0">
+                                                            <children>
+                                                                <Label alignment="CENTER" prefWidth="307.0"
+                                                                       text="Employee ID">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="30.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label fx:id="lblEmpIDRole" alignment="TOP_CENTER"
+                                                                       contentDisplay="CENTER" prefHeight="35.0"
+                                                                       prefWidth="307.0">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="20.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox layoutX="339.0" layoutY="231.0" prefHeight="200.0"
+                                                              prefWidth="200.0">
+                                                            <children>
+                                                                <Label alignment="CENTER" prefWidth="307.0"
+                                                                       text="Role ID">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="30.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label fx:id="lblRIDEmpRole" alignment="TOP_CENTER"
+                                                                       contentDisplay="CENTER" prefHeight="100.0"
+                                                                       prefWidth="307.0">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="20.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox layoutX="539.0" layoutY="231.0" prefHeight="200.0"
+                                                              prefWidth="200.0">
+                                                            <children>
+                                                                <Label alignment="CENTER" prefWidth="307.0"
+                                                                       text="Hours Worked">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="30.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label fx:id="lblHoursWorkedEmpRole"
+                                                                       alignment="TOP_CENTER" contentDisplay="CENTER"
+                                                                       prefHeight="100.0" prefWidth="307.0">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="20.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                    </tabs>
+                                </TabPane>
+                                <Label alignment="CENTER" layoutY="7.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="Manage Job Role">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Manage Work">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label alignment="CENTER" layoutY="7.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="Manage Work">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <TabPane layoutY="52.0" prefHeight="651.0" prefWidth="900.0"
+                                         tabClosingPolicy="UNAVAILABLE">
+                                    <tabs>
+                                        <Tab text="Assign Work">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="394.0"
+                                                            prefWidth="900.0">
+                                                    <children>
+                                                        <Button fx:id="btnAssignEmployeeWork" layoutX="438.0"
+                                                                layoutY="322.0" mnemonicParsing="false"
+                                                                onAction="#assignWork" prefHeight="37.0"
+                                                                prefWidth="172.0" text="Assign Work">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0"/>
+                                                            </font>
+                                                        </Button>
+                                                        <VBox layoutX="198.0" layoutY="139.0" prefHeight="183.0"
+                                                              prefWidth="182.0">
+                                                            <children>
+                                                                <Label text="Employee ID">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="25.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label text="Contract ID">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="25.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label text="Date Registered">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="25.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox layoutX="380.0" layoutY="139.0" prefHeight="166.0"
+                                                              prefWidth="288.0">
+                                                            <children>
+                                                                <TextField fx:id="txtEmpIDWork">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="20.0"/>
+                                                                    </VBox.margin>
+                                                                </TextField>
+                                                                <TextField fx:id="txtConIDWork">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="20.0"/>
+                                                                    </VBox.margin>
+                                                                </TextField>
+                                                                <DatePicker fx:id="dateRegWork" prefWidth="288.0"/>
+                                                            </children>
+                                                        </VBox>
+                                                        <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0"
+                                                               prefWidth="900.0" text="Assign Work">
+                                                            <font>
+                                                                <Font name="System Bold" size="24.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="View Work">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                                            prefWidth="200.0">
+                                                    <children>
+                                                        <Button fx:id="btnViewEmployeeWork" layoutX="394.0"
+                                                                layoutY="110.0" mnemonicParsing="false"
+                                                                onAction="#searchViewWork" prefHeight="37.0"
+                                                                prefWidth="172.0" text="View Work">
+                                                            <font>
+                                                                <Font name="System Bold" size="15.0"/>
+                                                            </font>
+                                                        </Button>
+                                                        <Label layoutX="247.0" layoutY="60.0" text="Employee ID">
+                                                            <font>
+                                                                <Font size="18.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <TextField fx:id="txtEmpIDViewWork" layoutX="364.0"
+                                                                   layoutY="60.0" prefHeight="31.0" prefWidth="286.0"/>
+                                                        <Label alignment="CENTER" layoutY="5.0" prefHeight="40.0"
+                                                               prefWidth="900.0" text="View Work">
+                                                            <font>
+                                                                <Font name="System Bold" size="24.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <VBox layoutX="225.0" layoutY="221.0" prefHeight="200.0"
+                                                              prefWidth="150.0">
+                                                            <children>
+                                                                <Label alignment="CENTER" prefWidth="307.0"
+                                                                       text="Employee ID">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="30.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label fx:id="lblEmpIDWork" alignment="TOP_CENTER"
+                                                                       contentDisplay="CENTER" prefHeight="100.0"
+                                                                       prefWidth="307.0">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="20.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox layoutX="375.0" layoutY="222.0" prefHeight="210.0"
+                                                              prefWidth="150.0">
+                                                            <children>
+                                                                <Label alignment="CENTER" prefWidth="307.0"
+                                                                       text="Contract ID">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="30.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label fx:id="lblConIDWork" alignment="TOP_CENTER"
+                                                                       contentDisplay="CENTER" prefHeight="100.0"
+                                                                       prefWidth="307.0">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="20.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                        <VBox layoutX="525.0" layoutY="221.0" prefHeight="200.0"
+                                                              prefWidth="150.0">
+                                                            <children>
+                                                                <Label alignment="CENTER" prefWidth="307.0"
+                                                                       text="Date Registered">
+                                                                    <font>
+                                                                        <Font size="18.0"/>
+                                                                    </font>
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="30.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                                <Label fx:id="lblDateRegisteredWork"
+                                                                       alignment="TOP_CENTER" contentDisplay="CENTER"
+                                                                       prefHeight="100.0" prefWidth="307.0">
+                                                                    <VBox.margin>
+                                                                        <Insets bottom="20.0"/>
+                                                                    </VBox.margin>
+                                                                </Label>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                    </tabs>
+                                </TabPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Calculate Pay">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="231.0" layoutY="114.0" text="Employee ID">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtEmpIDPay" layoutX="369.0" layoutY="112.0" prefHeight="31.0"
+                                           prefWidth="286.0"/>
+                                <Button fx:id="btnCalculatePayEmployee" layoutX="426.0" layoutY="159.0"
+                                        mnemonicParsing="false" onAction="#calculatePay" prefHeight="37.0"
+                                        prefWidth="172.0" text="Calculate Pay">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <Label layoutX="195.0" layoutY="446.0" text="Total Pay (in LKR)">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="lblDisplayPayEmployee" layoutX="371.0" layoutY="444.0" prefHeight="31.0"
+                                       prefWidth="286.0"/>
+                                <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="Calculate Employee Pay">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <VBox layoutX="150.0" layoutY="246.0" prefHeight="200.0" prefWidth="150.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefWidth="307.0" text="Employee ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="30.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblEmpIDPay" alignment="TOP_CENTER" contentDisplay="CENTER"
+                                               prefHeight="100.0" prefWidth="307.0">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="300.0" layoutY="244.0" prefHeight="200.0" prefWidth="150.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefWidth="307.0" text="Role ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="30.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblRoleIDPay" alignment="TOP_CENTER" contentDisplay="CENTER"
+                                               prefHeight="100.0" prefWidth="307.0">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="450.0" layoutY="244.0" prefHeight="200.0" prefWidth="150.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefWidth="307.0" text="Hourly Pay">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="30.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblHourlyPayPay" alignment="TOP_CENTER" contentDisplay="CENTER"
+                                               prefHeight="100.0" prefWidth="307.0">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="600.0" layoutY="244.0" prefHeight="200.0" prefWidth="150.0">
+                                    <children>
+                                        <Label alignment="CENTER" prefWidth="307.0" text="Hours Worked">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="30.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblHoursWorkedPay" alignment="TOP_CENTER" contentDisplay="CENTER"
+                                               prefHeight="100.0" prefWidth="307.0">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="btnMainMenu" layoutX="720.0" layoutY="675.0" mnemonicParsing="false" onAction="#backMainMenu"
+                prefHeight="31.0" prefWidth="144.0" text="Main Menu">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

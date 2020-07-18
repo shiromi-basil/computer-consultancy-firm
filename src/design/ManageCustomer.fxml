@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0"
+            prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="code.ControllerManageCustomer">
+    <children>
+        <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="740.0"
+                 prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Create Customer">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox layoutX="169.0" layoutY="176.0" prefHeight="240.0" prefWidth="163.0">
+                                    <children>
+                                        <Label text="Customer ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="First Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Last Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Contact Number">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="359.0" layoutY="176.0" prefHeight="240.0" prefWidth="372.0">
+                                    <children>
+                                        <TextField fx:id="txtCusID">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="txtCusFName">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="txtCusLName">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="txtCusNumber">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                    </children>
+                                </VBox>
+                                <Button fx:id="btnCreateCustomer" layoutX="459.0" layoutY="416.0"
+                                        mnemonicParsing="false" onAction="#createCustomer" prefHeight="37.0"
+                                        prefWidth="172.0" text="Create Customer">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="Create Customer">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Delete Customer">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="btnDeleteCustomer" layoutX="404.0" layoutY="495.0"
+                                        mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="37.0"
+                                        prefWidth="172.0" text="Delete Customer">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <TextField fx:id="txtCusIDDelete" layoutX="347.0" layoutY="122.0" prefHeight="31.0"
+                                           prefWidth="286.0"/>
+                                <VBox layoutX="170.0" layoutY="256.0" prefHeight="240.0" prefWidth="163.0">
+                                    <children>
+                                        <Label text="Customer ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="First Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Last Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Contact Number">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="347.0" layoutY="255.0" prefHeight="240.0" prefWidth="372.0">
+                                    <children>
+                                        <Label fx:id="lblCusIDDel" prefHeight="0.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblCusFNameDel" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblCusLNameDel" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblCusNumberDel" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="23.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Label layoutX="221.0" layoutY="124.0" text="Customer ID">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="btnSearchCustomerDelete" layoutX="398.0" layoutY="174.0"
+                                        mnemonicParsing="false" onAction="#searchDeleteCustomer" prefHeight="37.0"
+                                        prefWidth="172.0" text="Search Customer">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="Delete Customer">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Update Customer">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="btnUpdateCustomer" layoutX="404.0" layoutY="496.0"
+                                        mnemonicParsing="false" onAction="#updateCustomer" prefHeight="37.0"
+                                        prefWidth="172.0" text="Update Customer">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <VBox layoutX="347.0" layoutY="255.0" prefHeight="240.0" prefWidth="372.0">
+                                    <children>
+                                        <Label fx:id="lblCusIDUp" prefHeight="37.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <TextField fx:id="txtCusFNameUp">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="txtCusLNameUp">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="txtCusNumberUp">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="170.0" layoutY="256.0" prefHeight="240.0" prefWidth="163.0">
+                                    <children>
+                                        <Label text="Customer ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="First Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Last Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Contact Number">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Label layoutX="221.0" layoutY="124.0" text="Customer ID">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtCusIDSearch" layoutX="347.0" layoutY="122.0" prefHeight="31.0"
+                                           prefWidth="286.0"/>
+                                <Button fx:id="btnSearchCustomerUpdate" layoutX="398.0" layoutY="174.0"
+                                        mnemonicParsing="false" onAction="#searchUpdateCustomer" prefHeight="37.0"
+                                        prefWidth="172.0" text="Search Customer">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="Update Customer">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="View Customer">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="900.0">
+                            <children>
+                                <VBox layoutX="347.0" layoutY="256.0" prefHeight="240.0" prefWidth="372.0">
+                                    <children>
+                                        <Label fx:id="lblCusID" prefHeight="0.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblCusFName" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblCusLName" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblCusNumber" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="23.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="170.0" layoutY="256.0" prefHeight="240.0" prefWidth="163.0">
+                                    <children>
+                                        <Label text="Customer ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="First Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Last Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Contact Number">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Button fx:id="btnSearchCustomerView" layoutX="398.0" layoutY="174.0"
+                                        mnemonicParsing="false" onAction="#searchViewCustomer" prefHeight="37.0"
+                                        prefWidth="172.0" text="View Customer">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <TextField fx:id="txtCusIDView" layoutX="347.0" layoutY="122.0" prefHeight="31.0"
+                                           prefWidth="286.0"/>
+                                <Label layoutX="221.0" layoutY="124.0" text="Customer ID">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="View Customer">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="btnMainMenu" layoutX="720.0" layoutY="675.0" mnemonicParsing="false" onAction="#backMainMenu"
+                prefHeight="31.0" prefWidth="144.0" text="Main Menu">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

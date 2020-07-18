@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0"
+            prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="code.ControllerManageRole">
+    <children>
+        <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="740.0"
+                 prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Create Role">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox layoutX="169.0" layoutY="176.0" prefHeight="240.0" prefWidth="163.0">
+                                    <children>
+                                        <Label text="Role ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Description">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="50.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Hourly Pay">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="359.0" layoutY="176.0" prefHeight="240.0" prefWidth="372.0">
+                                    <children>
+                                        <TextField fx:id="txtRoleID">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextField fx:id="txtRoleName">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextArea fx:id="txtRoleDescription" prefHeight="59.0" prefWidth="200.0">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextArea>
+                                        <TextField fx:id="txtRoleHourlyPay">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                    </children>
+                                </VBox>
+                                <Button fx:id="btnCreateRole" layoutX="459.0" layoutY="426.0" mnemonicParsing="false"
+                                        onAction="#createRole" prefHeight="37.0" prefWidth="172.0" text="Create Role">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="Create Role">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Delete Role">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="btnDeleteRole" layoutX="404.0" layoutY="506.0" mnemonicParsing="false"
+                                        onAction="#deleteRole" prefHeight="37.0" prefWidth="172.0" text="Delete Role">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <TextField fx:id="txtRoleIDDelete" layoutX="347.0" layoutY="122.0" prefHeight="31.0"
+                                           prefWidth="286.0"/>
+                                <VBox layoutX="170.0" layoutY="256.0" prefHeight="240.0" prefWidth="163.0">
+                                    <children>
+                                        <Label text="Role ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Description">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="50.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Hourly Pay">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="347.0" layoutY="255.0" prefHeight="240.0" prefWidth="372.0">
+                                    <children>
+                                        <Label fx:id="lblRoleIDDel" prefHeight="0.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblRoleNameDel" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblRoleDescriptionDel" prefHeight="59.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblRoleHourlyPayDel" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="23.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Label layoutX="221.0" layoutY="124.0" text="Role ID">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="btnSearchRoleDelete" layoutX="398.0" layoutY="174.0"
+                                        mnemonicParsing="false" onAction="#searchDeleteRole" prefHeight="37.0"
+                                        prefWidth="172.0" text="Search Role">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="Delete Role">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Update Role">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="btnUpdateRole" layoutX="404.0" layoutY="506.0" mnemonicParsing="false"
+                                        onAction="#updateRole" prefHeight="37.0" prefWidth="172.0" text="Update Role">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <VBox layoutX="347.0" layoutY="255.0" prefHeight="240.0" prefWidth="372.0">
+                                    <children>
+                                        <Label fx:id="lblRoleIDUp" prefHeight="37.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <TextField fx:id="txtRoleNameUp">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                        <TextArea fx:id="txtRoleDescriptionUp" prefHeight="59.0" prefWidth="200.0">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextArea>
+                                        <TextField fx:id="txtRoleHourlyPayUp">
+                                            <VBox.margin>
+                                                <Insets bottom="20.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="170.0" layoutY="256.0" prefHeight="240.0" prefWidth="163.0">
+                                    <children>
+                                        <Label text="Role ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Description">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="50.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Hourly Pay">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Label layoutX="221.0" layoutY="124.0" text="Role ID">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtRoleIDSearch" layoutX="347.0" layoutY="122.0" prefHeight="31.0"
+                                           prefWidth="286.0"/>
+                                <Button fx:id="btnSearchRoleUpdate" layoutX="398.0" layoutY="174.0"
+                                        mnemonicParsing="false" onAction="#searchUpdateRole" prefHeight="37.0"
+                                        prefWidth="172.0" text="Search Role">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="Update Role">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="View Role">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="900.0">
+                            <children>
+                                <VBox layoutX="347.0" layoutY="256.0" prefHeight="240.0" prefWidth="372.0">
+                                    <children>
+                                        <Label fx:id="lblRoleID" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblRoleName" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblRoleDescription" prefHeight="59.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label fx:id="lblRoleHourlyPay" prefHeight="30.0" prefWidth="372.0">
+                                            <VBox.margin>
+                                                <Insets bottom="23.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="170.0" layoutY="256.0" prefHeight="240.0" prefWidth="163.0">
+                                    <children>
+                                        <Label text="Role ID">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Name">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Description">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="50.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                        <Label text="Hourly Pay">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets bottom="25.0"/>
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Button fx:id="btnSearchRoleView" layoutX="398.0" layoutY="174.0"
+                                        mnemonicParsing="false" onAction="#searchViewRole" prefHeight="37.0"
+                                        prefWidth="172.0" text="View Role">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                </Button>
+                                <TextField fx:id="txtRoleIDView" layoutX="347.0" layoutY="122.0" prefHeight="31.0"
+                                           prefWidth="286.0"/>
+                                <Label layoutX="221.0" layoutY="124.0" text="Role ID">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutY="10.0" prefHeight="40.0" prefWidth="900.0"
+                                       text="View Role">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="btnMainMenu" layoutX="720.0" layoutY="675.0" mnemonicParsing="false" onAction="#backMainMenu"
+                prefHeight="31.0" prefWidth="144.0" text="Main Menu">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

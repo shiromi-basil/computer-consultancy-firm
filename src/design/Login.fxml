@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="code.ControllerLogin">
+    <children>
+        <Button fx:id="btnLogin" layoutX="279.0" layoutY="365.0" mnemonicParsing="false" onAction="#systemLogin"
+                prefHeight="31.0" prefWidth="88.0" text="Login"/>
+        <Button layoutX="470.0" layoutY="530.0" mnemonicParsing="false" onAction="#systemExit" prefHeight="31.0"
+                prefWidth="79.0" text="Exit">
+            <font>
+                <Font name="System Bold" size="15.0"/>
+            </font>
+        </Button>
+        <VBox layoutX="241.0" layoutY="166.0" prefHeight="199.0" prefWidth="252.0">
+            <children>
+                <TextField fx:id="txtUsername">
+                    <VBox.margin>
+                        <Insets bottom="5.0"/>
+                    </VBox.margin>
+                </TextField>
+                <Label fx:id="lblUsername" alignment="CENTER" prefHeight="21.0" prefWidth="289.0">
+                    <VBox.margin>
+                        <Insets bottom="60.0"/>
+                    </VBox.margin>
+                </Label>
+                <PasswordField fx:id="txtPassword"/>
+                <Label fx:id="lblPassword" alignment="CENTER" prefHeight="21.0" prefWidth="327.0"/>
+            </children>
+        </VBox>
+        <VBox layoutX="107.0" layoutY="166.0" prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="102.0" text="Username">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="90.0"/>
+                    </VBox.margin>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="101.0" text="Password">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <Label fx:id="lblLogin" alignment="CENTER" layoutY="35.0" prefHeight="40.0" prefWidth="600.0"
+               text="Computer Consultancy Firm">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Label>
+        <Label fx:id="lblLogin1" alignment="CENTER" layoutY="75.0" prefHeight="40.0" prefWidth="600.0" text="Login">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
