@@ -69,3 +69,36 @@ CREATE TABLE IF NOT EXISTS computer_consultancy_firm.employee_job_role(
 	ON UPDATE CASCADE ON DELETE CASCADE
 );
 
+-- Inserting DATA into the TABLES
+
+INSERT IGNORE INTO computer_consultancy_firm.employee (eID, eFirstName, eLastName, eDOB, eNumber, eAddress) VALUES 
+	(11, 'Jane', 'Doe', '2020-06-01', 0771234567, 'Colombo'),
+	(12, 'John', 'Doe', '2020-06-02', 0771234567, 'Colombo'),
+	(13, 'Anne', 'Steve', '2020-06-03', 0771234567, 'Colombo');
+
+INSERT IGNORE INTO computer_consultancy_firm.customer (cusID, cusFirstName, cusLastName, cusNumber) VALUES 
+	(21, 'Anne', 'John', 0771234567),
+	(22, 'Mary', 'Steve', 0771234567),
+	(23, 'Jane', 'Jacob', 0771234567);
+	
+INSERT IGNORE INTO computer_consultancy_firm.contract (conID, conName, conDescription, conCreationDate, conJobType, conProjectLeaderID, cusID) VALUES 
+	(31, 'Software Creations', 'Developing a software for marketing', '2018-08-31', 'Software Upgrade', 11, 21),
+	(32, 'HW Development', 'Developing a hardware for manager', '2019-01-31', 'System Development', 13, 22),
+	(33, 'SW Initiation', 'Developing a software for HR department', '2018-12-20', 'Software Upgarde', 12, 21);
+
+INSERT IGNORE INTO computer_consultancy_firm.role (rID, rName, rDescription, rHourlyPay) VALUES 
+	(41, 'Hardware Technician', 'Developing hardware', 5000),
+	(42, 'Programmer', 'Developing code for the program', 4000),
+	(43, 'Software Installer', 'Developing user interface', 4500);
+	
+INSERT IGNORE INTO computer_consultancy_firm.employee_work (eID, conID, dateRegistered) VALUES 
+	(11, 31, '2018-08-30'),
+	(12, 31, '2018-08-31'),
+	(12, 33, '2018-08-25'),
+	(13, 32, '2018-07-10'),
+	(11, 33, '2018-12-25');
+
+INSERT IGNORE INTO computer_consultancy_firm.employee_job_role (eID, rID, hoursWorked) VALUES 
+	(11, 41, 20),
+	(11, 42, 25),
+	(12, 41, 30);
