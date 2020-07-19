@@ -62,7 +62,7 @@ Type `localhost/phpmyadmin/` in the browser's address bar. Click on the 'Import'
 * Assign work to a contract.
 
 ## Screenshots
-Input & Output
+![Demo GIF](demo/computer-consultancy-firm.gif)
 
 ## Built With
 * [Java](https://docs.oracle.com/en/java/)
